@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brasserie Belli · Fransk brasserie i Aarhus siden 1994</title>
+<meta name="description" content="Brasserie Belli på Frederiksgade 54 i Aarhus. Klassiske franske brasserieretter, frokost fra kl. 11 og aften fra kl. 16.30. Book bord online eller ring 86 12 07 60.">
+<link rel="canonical" href="https://belli.dk/">
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="favicon.png">
+<meta property="og:type" content="restaurant">
+<meta property="og:locale" content="da_DK">
+<meta property="og:site_name" content="Brasserie Belli">
+<meta property="og:title" content="Brasserie Belli · Fransk brasserie i Aarhus siden 1994">
+<meta property="og:description" content="Moules, steak frites og tatar på Frederiksgade 54. Åbent tirsdag til lørdag fra kl. 11.">
+<meta property="og:image" content="img/facade-wide-1800.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#6A1B1B">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/facade-wide-1800.webp" imagesrcset="img/facade-wide-900.webp 900w, img/facade-wide-1800.webp 1242w" imagesizes="100vw" media="(min-width:761px)">
+<link rel="preload" as="image" href="img/facade-tall-900.webp" imagesrcset="img/facade-tall-480.webp 480w, img/facade-tall-900.webp 577w" imagesizes="100vw" media="(max-width:760px)">
+
+<style>
+:root{
+  --ink:#1C1614;
+  --paper:#FDFBF7;
+  --paper-2:#F4EFE6;
+  --ox:#6A1B1B;
+  --ox-deep:#48100F;
+  --brass:#B5852F;
+  --teal:#1D5E5C;
+  --muted:#6E635C;
+  --line:rgba(28,22,20,.14);
+  --maxw:1220px;
+  --gut:clamp(20px,5vw,64px);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:"Archivo",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:"Bodoni Moda",Georgia,"Times New Roman",serif;font-weight:400;margin:0;line-height:1.06;letter-spacing:-.01em}
+h1{font-size:clamp(3rem,12vw,7.4rem)}
+h2{font-size:clamp(2.1rem,5.4vw,3.6rem)}
+h3{font-size:clamp(1.25rem,2.4vw,1.6rem);line-height:1.2}
+p{margin:0 0 1.1em}
+.wrap{width:100%;max-width:var(--maxw);margin-inline:auto;padding-inline:var(--gut)}
+.lede{font-size:clamp(1.08rem,1.7vw,1.3rem);line-height:1.62;color:#3A312C}
+.small{font-size:.86rem;letter-spacing:.02em;color:var(--muted)}
+section{padding-block:clamp(64px,9vw,128px)}
+[id]{scroll-margin-top:92px}
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.55em;
+  font-family:"Archivo",sans-serif;font-size:.97rem;font-weight:600;letter-spacing:.04em;
+  padding:1.05em 1.9em;border:1px solid var(--ox);background:var(--ox);color:#FFF6EC;
+  text-decoration:none;border-radius:2px;transition:background .25s,color .25s,border-color .25s;
+  min-height:52px;
+}
+.btn:hover,.btn:focus-visible{background:var(--ox-deep);border-color:var(--ox-deep)}
+.btn--ghost{background:transparent;color:var(--ink);border-color:rgba(28,22,20,.35)}
+.btn--ghost:hover,.btn--ghost:focus-visible{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.btn--light{background:transparent;border-color:rgba(255,246,236,.5);color:#FFF6EC}
+.btn--light:hover,.btn--light:focus-visible{background:#FFF6EC;color:var(--ox);border-color:#FFF6EC}
+:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+
+/* ---------- header ---------- */
+.hdr{position:fixed;inset:0 0 auto;z-index:60;transition:background .35s,box-shadow .35s;padding-block:14px}
+.hdr__in{display:flex;align-items:center;gap:22px}
+.hdr__logo{flex:0 0 auto;line-height:0}
+.hdr__logo img{width:128px;transition:opacity .3s}
+.hdr__logo .dark{display:none}
+.nav{margin-left:auto;display:flex;align-items:center;gap:clamp(14px,1.9vw,30px)}
+.nav a{
+  color:#FFF6EC;text-decoration:none;font-size:.93rem;letter-spacing:.03em;
+  padding:6px 0;border-bottom:1px solid transparent;transition:border-color .25s,color .25s;
+}
+.nav a:hover,.nav a:focus-visible{border-color:currentColor}
+.hdr .btn{padding:.78em 1.45em;min-height:44px}
+.hdr--solid{background:var(--paper);box-shadow:0 1px 0 var(--line)}
+.hdr--solid .hdr__logo .light{display:none}
+.hdr--solid .hdr__logo .dark{display:block}
+.hdr--solid .nav a{color:var(--ink)}
+.hdr--solid .btn--light{border-color:var(--ox);color:var(--ox)}
+.hdr--solid .btn--light:hover{background:var(--ox);color:#FFF6EC}
+.burger{display:none;margin-left:auto;width:46px;height:46px;border:0;background:none;cursor:pointer;padding:11px}
+.burger span{display:block;height:1.5px;background:#FFF6EC;margin:5px 0;transition:transform .3s,opacity .3s}
+.hdr--solid .burger span{background:var(--ink)}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden;padding-bottom:clamp(40px,7vh,84px)}
+.hero picture{position:absolute;inset:0}
+.hero__img{width:100%;height:100%;object-fit:cover;object-position:center 42%}
+.hero::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(20,9,8,.92) 0%,rgba(20,9,8,.72) 38%,rgba(20,9,8,.34) 64%,rgba(20,9,8,.66) 100%);
+}
+@media(min-width:761px){
+  .hero::after{
+    background:
+      linear-gradient(to right,rgba(20,9,8,.78) 0%,rgba(20,9,8,.42) 42%,rgba(20,9,8,0) 72%),
+      linear-gradient(to top,rgba(20,9,8,.88) 0%,rgba(20,9,8,.46) 32%,rgba(20,9,8,.12) 60%,rgba(20,9,8,.62) 100%);
+  }
+}
+.hero__in{position:relative;z-index:2;color:#FFF6EC;width:100%}
+.hero__est{
+  font-family:"Bodoni Moda",serif;font-style:italic;font-size:1.05rem;
+  margin:0 0 10px;color:rgba(255,246,236,.85);letter-spacing:.01em;
+}
+.hero h1{color:#FFF6EC;max-width:12ch}
+.hero__sub{max-width:34ch;margin:22px 0 30px;font-size:clamp(1.05rem,1.7vw,1.28rem);color:rgba(255,246,236,.92);line-height:1.5}
+.hero__cta{display:flex;flex-wrap:wrap;gap:12px}
+.hero__facts{
+  display:flex;flex-wrap:wrap;gap:0 26px;margin-top:34px;padding-top:20px;
+  border-top:1px solid rgba(255,246,236,.26);font-size:.9rem;color:rgba(255,246,236,.82);
+}
+.hero__facts span{display:inline-flex;gap:.5em}
+.hero__facts b{font-weight:500;color:#FFF6EC}
+
+/* ---------- notice ---------- */
+.notice{background:var(--paper-2);padding-block:16px;font-size:.92rem}
+.notice .wrap{display:flex;gap:12px;align-items:baseline;flex-wrap:wrap}
+.notice em{font-style:normal;color:var(--ox);font-weight:600}
+
+/* ---------- intro ---------- */
+.intro{display:grid;grid-template-columns:1fr 1.06fr;gap:clamp(30px,5vw,80px);align-items:center}
+.intro__fig{position:relative}
+.intro__fig img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.sig{font-family:"Bodoni Moda",serif;font-style:italic;font-size:1.28rem;color:var(--ox);margin-top:.4em}
+
+/* ---------- historien ---------- */
+.hist{background:var(--ox);color:#FFF6EC}
+.hist h2{color:#FFF6EC}
+.hist__top{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,72px);align-items:end;margin-bottom:clamp(44px,6vw,80px)}
+.hist__top p{color:rgba(255,246,236,.86)}
+.hist__grid{display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(18px,3vw,36px);align-items:start}
+.hist__imgs{grid-column:span 5;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.hist__imgs img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.hist__imgs figure{margin:0}
+.hist__imgs figcaption{font-size:.76rem;color:rgba(255,246,236,.6);margin-top:8px;line-height:1.4}
+.years{grid-column:span 7;list-style:none;margin:0;padding:0}
+.years li{display:grid;grid-template-columns:5.5rem 1fr;gap:clamp(14px,2vw,30px);padding:18px 0;border-top:1px solid rgba(255,246,236,.22)}
+.years li:last-child{border-bottom:1px solid rgba(255,246,236,.22)}
+.years b{font-family:"Bodoni Moda",serif;font-weight:400;font-size:1.5rem;color:var(--brass);line-height:1.2}
+.years p{margin:0;color:rgba(255,246,236,.88);font-size:1rem}
+
+/* ---------- maden ---------- */
+.food__head{display:grid;grid-template-columns:1fr 1fr;gap:clamp(26px,4vw,70px);align-items:end;margin-bottom:clamp(36px,5vw,64px)}
+.food__grid{display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(16px,2.4vw,30px)}
+.food__grid figure{margin:0}
+.food__grid img{width:100%;object-fit:cover}
+.f-a{grid-column:span 7}
+.f-a img{aspect-ratio:5/4}
+.f-b{grid-column:span 5;align-self:end}
+.f-b img{aspect-ratio:4/5}
+.f-c{grid-column:span 4}
+.f-c img{aspect-ratio:4/5}
+.f-d{grid-column:span 4;margin-top:clamp(20px,5vw,64px)}
+.f-d img{aspect-ratio:4/5}
+.f-e{grid-column:span 4}
+.f-e img{aspect-ratio:4/5}
+figcaption{font-size:.88rem;color:var(--muted);margin-top:10px;line-height:1.45}
+figcaption b{display:block;font-family:"Bodoni Moda",serif;font-weight:400;font-size:1.15rem;color:var(--ink);letter-spacing:.01em}
+
+/* gingham rule: nod to the checked tablecloths on the terrace */
+.gingham{
+  height:22px;
+  background:
+    repeating-linear-gradient(90deg,rgba(150,30,30,.55) 0 11px,transparent 11px 22px),
+    repeating-linear-gradient(0deg,rgba(150,30,30,.55) 0 11px,transparent 11px 22px),
+    #FFF;
+}
+
+/* ---------- menu ---------- */
+.menu{background:var(--paper-2)}
+.menu__head{display:flex;flex-wrap:wrap;gap:18px 40px;align-items:flex-end;justify-content:space-between;margin-bottom:26px}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 28px;padding:0;border-bottom:1px solid var(--line)}
+.tab{
+  appearance:none;border:0;background:none;cursor:pointer;font-family:"Archivo",sans-serif;
+  font-size:1rem;letter-spacing:.02em;color:var(--muted);padding:12px 4px;margin-right:22px;
+  border-bottom:2px solid transparent;margin-bottom:-1px;transition:color .2s,border-color .2s;
+}
+.tab[aria-selected="true"]{color:var(--ox);border-color:var(--ox);font-weight:600}
+.panel[hidden]{display:none}
+.panel__note{font-size:.84rem;color:var(--muted);margin-bottom:28px;display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.panel__note a{color:var(--ox)}
+.cols{columns:2;column-gap:clamp(34px,5vw,80px)}
+.cat{break-inside:avoid;margin-bottom:34px}
+.cat h3{margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.dish{display:flex;align-items:baseline;gap:8px;padding:9px 0}
+.dish__name{font-weight:500}
+.dish__desc{color:var(--muted);font-weight:400}
+.dish__dots{flex:1 1 auto;border-bottom:1px dotted rgba(28,22,20,.3);transform:translateY(-4px);min-width:16px}
+.dish__price{font-variant-numeric:tabular-nums;color:var(--ink);white-space:nowrap}
+.menu__foot{margin-top:10px;font-size:.92rem;color:var(--muted)}
+
+/* ---------- two services ---------- */
+.serv{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,3vw,40px)}
+.serv article{background:var(--paper);border:1px solid var(--line);padding:clamp(24px,3vw,40px);display:flex;flex-direction:column}
+.serv img{width:100%;aspect-ratio:16/10;object-fit:cover;margin-bottom:22px}
+.serv .hours{font-variant-numeric:tabular-nums;color:var(--ox);font-weight:600;margin-bottom:10px;font-size:.95rem}
+.serv a.txt{margin-top:auto;padding-top:14px;color:var(--ox);text-decoration:none;border-bottom:1px solid currentColor;align-self:flex-start}
+
+/* ---------- vin ---------- */
+.vin{background:var(--ink);color:#F1E9DF}
+.vin h2{color:#FFF6EC}
+.vin__grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,80px);align-items:center}
+.vin__imgs{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.vin__imgs img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.vin p{color:rgba(241,233,223,.82)}
+.pull{font-family:"Bodoni Moda",serif;font-style:italic;font-size:clamp(1.2rem,2vw,1.5rem);line-height:1.4;color:#FFF6EC;border-left:2px solid var(--brass);padding-left:20px;margin:26px 0 0}
+
+/* ---------- huset ---------- */
+.huset img.wide{width:100%;aspect-ratio:16/9;object-fit:cover;margin-bottom:clamp(28px,4vw,48px)}
+.huset__grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(28px,5vw,72px);align-items:center}
+
+/* ---------- selskaber ---------- */
+.band{background:var(--paper-2);padding-block:clamp(40px,6vw,72px)}
+.band__in{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,4vw,60px);align-items:center}
+
+/* ---------- booking ---------- */
+.book{background:var(--ox);color:#FFF6EC;text-align:center}
+.book h2{color:#FFF6EC;max-width:16ch;margin-inline:auto}
+.book p{color:rgba(255,246,236,.85);max-width:54ch;margin-inline:auto;font-size:1.02rem;line-height:1.6}
+.book__cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:28px}
+.book__meta{margin-top:34px;padding-top:24px;border-top:1px solid rgba(255,246,236,.24);display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:left;font-size:.93rem;color:rgba(255,246,236,.85)}
+.book__meta b{display:block;color:#FFF6EC;font-weight:600;margin-bottom:4px}
+
+/* ---------- find os ---------- */
+.find__grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(28px,4vw,60px);align-items:start}
+.find dl{margin:0;display:grid;grid-template-columns:auto;gap:22px}
+.find dt{font-family:"Bodoni Moda",serif;font-style:italic;font-size:1rem;color:var(--ox);margin-bottom:6px}
+.find dd{margin:0;font-size:1.05rem}
+.find dd a{text-decoration:none;border-bottom:1px solid var(--line)}
+.map{margin:0}
+.map img{width:100%;aspect-ratio:4/3;object-fit:cover;border:1px solid var(--line);display:block}
+.map figcaption{font-size:.8rem;margin-top:8px}
+
+/* ---------- footer ---------- */
+.ftr{background:var(--ink);color:rgba(241,233,223,.75);padding-block:clamp(44px,6vw,72px);font-size:.93rem}
+.ftr a{color:rgba(241,233,223,.75)}
+.ftr__grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:clamp(24px,4vw,60px)}
+.ftr img.mark{width:150px;margin-bottom:18px}
+.ftr h4{font-family:"Bodoni Moda",serif;font-style:italic;font-weight:400;font-size:1.05rem;color:rgba(241,233,223,.9);margin:0 0 12px}
+.ftr ul{list-style:none;margin:0;padding:0}
+.ftr li{margin-bottom:8px}
+.ftr__bot{margin-top:40px;padding-top:20px;border-top:1px solid rgba(241,233,223,.16);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.82rem;color:rgba(241,233,223,.5)}
+
+/* ---------- mobile book bar ---------- */
+.mbar{display:none}
+
+/* ---------- reveal ---------- */
+.rv{opacity:0;transform:translateY(14px);transition:opacity .55s ease,transform .55s ease}
+.rv.in{opacity:1;transform:none}
+
+/* ---------- responsive ---------- */
+@media(max-width:1000px){
+  .intro,.hist__top,.food__head,.vin__grid,.huset__grid,.band__in,.find__grid,.serv{grid-template-columns:1fr}
+  .hist__imgs,.years{grid-column:span 12}
+  .hist__imgs{max-width:460px}
+  .f-a,.f-b,.f-c,.f-d,.f-e{grid-column:span 6}
+  .f-d{margin-top:0}
+  .ftr__grid{grid-template-columns:1fr 1fr}
+  .cols{columns:1}
+  .find__grid{gap:34px}
+}
+@media(max-width:760px){
+  body{font-size:16px}
+  .nav{
+    position:fixed;inset:0;background:var(--ox);flex-direction:column;justify-content:center;
+    gap:22px;transform:translateX(100%);transition:transform .38s ease;margin:0;padding:40px;
+  }
+  .nav.open{transform:none}
+  .nav a{color:#FFF6EC;font-family:"Bodoni Moda",serif;font-size:1.7rem;border:0}
+  .nav .btn{margin-top:14px}
+  .burger{display:block;position:relative;z-index:70}
+  .burger[aria-expanded="true"] span{background:#FFF6EC}
+  .burger[aria-expanded="true"] span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+  .burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+  .burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+  .hdr .nav:not(.open) .btn{display:none}
+  .hero{min-height:92svh;padding-bottom:104px}
+  .hero__img{object-position:center 58%}
+  .hero__cta .btn{flex:1 1 100%}
+  .hero__facts{flex-direction:column;gap:6px}
+  .f-a,.f-b,.f-c,.f-d,.f-e{grid-column:span 12}
+  .f-b{align-self:auto}
+  .book__meta{grid-template-columns:1fr;text-align:center}
+  .ftr__grid{grid-template-columns:1fr}
+  .years li{grid-template-columns:1fr;gap:2px}
+  .mbar{
+    display:flex;position:fixed;left:0;right:0;bottom:0;z-index:55;gap:10px;padding:10px 14px;
+    background:rgba(253,251,247,.96);border-top:1px solid var(--line);backdrop-filter:blur(8px);
+  }
+  .mbar .btn{flex:1;padding:.9em 1em;min-height:50px}
+  .mbar .btn--ghost{flex:0 0 58px}
+  body{padding-bottom:0}
+  .ftr{padding-bottom:110px}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<header class="hdr" id="hdr">
+  <div class="wrap hdr__in">
+    <a class="hdr__logo" href="#top" aria-label="Brasserie Belli, til forsiden">
+      <img class="light" src="img/logo-white.png" alt="Brasserie Belli" width="128" height="47">
+      <img class="dark" src="img/logo-dark.png" alt="Brasserie Belli" width="128" height="47">
+    </a>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="nav" aria-label="Åbn menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav" id="nav">
+      <a href="#menu">Menu</a>
+      <a href="#frokost">Frokost</a>
+      <a href="#aften">Aften</a>
+      <a href="#historien">Historien</a>
+      <a href="#huset">Huset</a>
+      <a href="#find">Kontakt</a>
+      <a class="btn btn--light" href="https://www.bord-booking.dk/online_booking/index.php?restaurantId=70023" target="_blank" rel="noopener">Book bord</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <picture>
+      <source media="(max-width:760px)" srcset="img/facade-tall-480.webp 480w, img/facade-tall-900.webp 577w" sizes="100vw">
+      <source srcset="img/facade-wide-900.webp 900w, img/facade-wide-1800.webp 1242w" sizes="100vw">
+      <img class="hero__img" src="img/facade-wide-1800.webp" alt="Facaden på Brasserie Belli i Frederiksgade med udeservering under markisen" width="1800" height="1012" fetchpriority="high">
+    </picture>
+    <div class="wrap hero__in">
+      <p class="hero__est">Est. 1994</p>
+      <h1>Brasserie Belli</h1>
+      <p class="hero__sub">Klassisk fransk brasserie midt i Aarhus. Moules, steak frites og tatar, serveret af familien Belli i 32 år.</p>
+      <div class="hero__cta">
+        <a class="btn" href="https://www.bord-booking.dk/online_booking/index.php?restaurantId=70023" target="_blank" rel="noopener">Book bord</a>
+        <a class="btn btn--light" href="#menu">Se menukortet</a>
+      </div>
+      <div class="hero__facts">
+        <span>Frederiksgade 54, Aarhus C</span>
+        <span>Tirsdag–lørdag <b>11–23</b></span>
+        <span>Køkkenet <b>11–15</b> og <b>16.30–21</b></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- AKTUELT -->
+  <div class="notice">
+    <div class="wrap">
+      <em>Aktuelt</em>
+      <span>25.–26. september holder vi lukket på grund af selskaber. Vi åbner igen tirsdag kl. 11.</span>
+    </div>
+  </div>
+
+  <!-- OM -->
+  <section id="om">
+    <div class="wrap intro">
+      <div>
+        <h2>God gammeldags</h2>
+        <p class="lede">Belli er en hyggelig café og restaurant, der har ligget i Aarhus midtby siden 1994 — i gåafstand til Musikhuset, Aarhus Teater, Svalegangen, ARoS og Den Gamle By.</p>
+        <p>Vi laver ærlig mad af gode råvarer, også fra lokale leverandører: æbler fra mormor Bittens gamle æbletræer og urter fra brødrene Bellis have. Der er mange minder knyttet til mad. Lugt og smag kan uventet kaste os tilbage i tiden, og det er den slags måltid, vi laver.</p>
+        <p>Vi ønsker, at hver eneste gæst går herfra på glad mave og med en lille del af Belli med sig i hjertet.</p>
+        <p class="sig">Trine Belli &amp; Ronald Dijkstra</p>
+      </div>
+      <figure class="intro__fig rv">
+        <img src="img/salen-1400.webp" srcset="img/salen-700.webp 700w, img/salen-1400.webp 1400w" sizes="(max-width:1000px) 100vw, 46vw" alt="Salen på Brasserie Belli med hvide duge, røde bænke og farvede stole" width="1400" height="933" loading="lazy">
+      </figure>
+    </div>
+  </section>
+
+  <!-- HISTORIEN -->
+  <section class="hist" id="historien">
+    <div class="wrap">
+      <div class="hist__top">
+        <h2>Fra cirkusmanege til brasserie</h2>
+        <p class="lede">Familien Belli har rødder i det gamle danske cirkus. Klovnen i vinduet og plakaterne på væggene er ikke pynt — det er slægtens arbejdsliv, før køkkenet overtog.</p>
+      </div>
+      <div class="hist__grid">
+        <div class="hist__imgs rv">
+          <figure>
+            <img src="img/cirkus-900.webp" srcset="img/cirkus-450.webp 450w, img/cirkus-900.webp 900w" sizes="(max-width:1000px) 45vw, 20vw" alt="Historisk foto fra familien Bellis cirkusår" width="900" height="1125" loading="lazy">
+            <figcaption>Cirkusdirektøren og Tom Mix, cowboyhelten fra USA.</figcaption>
+          </figure>
+          <figure>
+            <img src="img/klovn-900.webp" srcset="img/klovn-450.webp 450w, img/klovn-900.webp 667w" sizes="(max-width:1000px) 45vw, 20vw" alt="Klovnefigur i baren på Brasserie Belli" width="900" height="1200" loading="lazy">
+            <figcaption>Klovnen står stadig i vinduet ud mod Frederiksgade.</figcaption>
+          </figure>
+        </div>
+        <ol class="years">
+          <li><b>1956</b><p>Cirkus Belli, i mange år et af Danmarks største, kører sin sidste sæson. Metha Belli, som byggede det op fra et lille omrejsende cirkus, dør netop i Aarhus.</p></li>
+          <li><b>1970’erne</b><p>Leo Belli følger i cirkussets spor og bliver luftartist. Det samme gør hans datter Trine i Cirkus Krone, inden hun uddanner sig som kok.</p></li>
+          <li><b>1984</b><p>Ronald Dijkstra, kok og tjener fra Alkmaar i Holland, følger kærligheden til Danmark og åbner sin første restaurant, Amadeus.</p></li>
+          <li><b>1992</b><p>Trine og Ronald overtager restaurant De Fire Sanser i Randers. Den får to stjerner i Den Danske Spiseguide.</p></li>
+          <li><b>1994</b><p>Værtshuset Peder Most på Frederiksgade 54 bliver købt, og Brasserie Belli bliver til. Trine og hendes mor Bitten driver det først som frokostrestaurant — indtil en fuldt hus-anmeldelse i Jyllands-Posten sætter fart i sagerne.</p></li>
+          <li><b>2015</b><p>Michelin-guiden dækker Aarhus for første gang. Belli er med som anbefaling.</p></li>
+          <li><b>I dag</b><p>Trine og Ronald driver brasseriet på 32. år sammen med et fast hold af tjenere og kokke.</p></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- MADEN -->
+  <section id="maden">
+    <div class="wrap">
+      <div class="food__head">
+        <h2>Maden</h2>
+        <p class="lede">På à la carte-kortet holder vi os til de franske klassikere: moules, steak frites, tatar og tarte tatin. På menukortet vover vi lidt mere.</p>
+      </div>
+      <div class="food__grid">
+        <figure class="f-a rv">
+          <img src="img/moules-1000.webp" srcset="img/moules-500.webp 500w, img/moules-1000.webp 1000w" sizes="(max-width:760px) 100vw, 55vw" alt="Gryde med dampede blåmuslinger på ternet dug" width="1000" height="800" loading="lazy">
+          <figcaption><b>Moules marinières</b>700 g linemuslinger fra Vildsund, dampet i hvidvin med urter.</figcaption>
+        </figure>
+        <figure class="f-b rv">
+          <img src="img/steak-frites-1000.webp" srcset="img/steak-frites-500.webp 500w, img/steak-frites-1000.webp 775w" sizes="(max-width:760px) 100vw, 38vw" alt="Boeuf bourguignon med kartoffelmos og rødvinssauce" width="1000" height="1250" loading="lazy">
+          <figcaption><b>Boeuf bourguignon</b>Langtidsbraiseret oksekød med kartoffelmos og rødvinssauce.</figcaption>
+        </figure>
+        <figure class="f-c rv">
+          <img src="img/tatar-1000.webp" srcset="img/tatar-500.webp 500w, img/tatar-1000.webp 667w" sizes="(max-width:760px) 100vw, 30vw" alt="Anretning fra sæsonmenuen på Brasserie Belli" width="1000" height="1250" loading="lazy">
+          <figcaption><b>Fra menukortet</b>Her vover køkkenet lidt mere end på à la carte.</figcaption>
+        </figure>
+        <figure class="f-d rv">
+          <img src="img/creme-brulee-1000.webp" srcset="img/creme-brulee-500.webp 500w, img/creme-brulee-1000.webp 1000w" sizes="(max-width:760px) 100vw, 30vw" alt="Dessert anrettet på tallerken hos Brasserie Belli" width="1000" height="1250" loading="lazy">
+          <figcaption><b>Desserten</b>Sidste ret på menuen, anrettet i køkkenet.</figcaption>
+        </figure>
+        <figure class="f-e rv">
+          <img src="img/kokken-900.webp" srcset="img/kokken-450.webp 450w, img/kokken-900.webp 750w" sizes="(max-width:760px) 100vw, 30vw" alt="Kok anretter i køkkenet på Brasserie Belli" width="900" height="1200" loading="lazy">
+          <figcaption>Alt anrettes i det åbne pass, få meter fra bordene.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <div class="gingham" aria-hidden="true"></div>
+
+  <!-- MENU -->
+  <section class="menu" id="menu">
+    <div class="wrap">
+      <div class="menu__head">
+        <h2>Menukortet</h2>
+        <p class="small">Kortene er gengivet fra belli.dk, juni 2026. Vinkortet er fra marts 2026.</p>
+      </div>
+
+      <div class="tabs" role="tablist" aria-label="Menukort">
+        <button class="tab" id="t-frokost" role="tab" aria-selected="true" aria-controls="p-frokost">Frokost</button>
+        <button class="tab" id="t-aften" role="tab" aria-selected="false" aria-controls="p-aften">Aften</button>
+        <button class="tab" id="t-menuer" role="tab" aria-selected="false" aria-controls="p-menuer">Menuer &amp; brunch</button>
+        <button class="tab" id="t-vin" role="tab" aria-selected="false" aria-controls="p-vin">Vin &amp; drikke</button>
+        <button class="tab" id="t-tilbud" role="tab" aria-selected="false" aria-controls="p-tilbud">Tirsdag &amp; onsdag</button>
+      </div>
+
+      <!-- FROKOST -->
+      <div class="panel" id="p-frokost" role="tabpanel" aria-labelledby="t-frokost">
+        <p class="panel__note">
+          <span>Serveres 11.00–15.00. Alle priser i kroner.</span>
+          <a href="https://belli.dk/wp-content/uploads/2026/06/Frokost-juni-2026.jpg" target="_blank" rel="noopener">Se det originale kort</a>
+        </p>
+        <div class="cols">
+          <div class="cat">
+            <h3>Til frokost</h3>
+            <div class="dish"><span class="dish__name">Quiche</span><span class="dish__dots"></span><span class="dish__price">90</span></div>
+            <p class="small" style="margin:-4px 0 6px">Varm tærte med spinat, tomat og svampe, serveret med salat</p>
+            <div class="dish"><span class="dish__name">Svampesuppe</span><span class="dish__dots"></span><span class="dish__price">100</span></div>
+            <p class="small" style="margin:-4px 0 6px">Cremet svampesuppe med trøffelolie og brødcrouton</p>
+            <div class="dish"><span class="dish__name">Salat</span><span class="dish__dots"></span><span class="dish__price">120</span></div>
+            <p class="small" style="margin:-4px 0 6px">Med osteflager, dressing, brødcroutoner og sprødt spicy kylling</p>
+            <div class="dish"><span class="dish__name">Løgsuppe</span><span class="dish__dots"></span><span class="dish__price">120</span></div>
+            <p class="small" style="margin:-4px 0 6px">Ostegratineret fransk løgsuppe</p>
+            <div class="dish"><span class="dish__name">Carpaccio</span><span class="dish__dots"></span><span class="dish__price">140</span></div>
+            <p class="small" style="margin:-4px 0 6px">Tynde skiver af okseinderlår med parmesan, rucola og pinjekerner</p>
+            <div class="dish"><span class="dish__name">Avocado smørrebrød</span><span class="dish__dots"></span><span class="dish__price">140</span></div>
+            <p class="small" style="margin:-4px 0 6px">Rugbrød med avocado og to spejlæg</p>
+          </div>
+          <div class="cat">
+            <h3>Lidt større</h3>
+            <div class="dish"><span class="dish__name">Burger</span><span class="dish__dots"></span><span class="dish__price">150</span></div>
+            <p class="small" style="margin:-4px 0 6px">Med pulled beef og pickles. Pommes frites kan tilkøbes</p>
+            <div class="dish"><span class="dish__name">Brunchanretning</span><span class="dish__dots"></span><span class="dish__price">180</span></div>
+            <p class="small" style="margin:-4px 0 6px">Seks små retter. Se fanen Menuer &amp; brunch</p>
+            <div class="dish"><span class="dish__name">Pasta</span><span class="dish__dots"></span><span class="dish__price">120/200</span></div>
+            <p class="small" style="margin:-4px 0 6px">Svampefyldt ravioli med sprødstegte østershatte og spinat i flødesauce</p>
+            <div class="dish"><span class="dish__name">Rørt tatar</span><span class="dish__dots"></span><span class="dish__price">120/200</span></div>
+            <p class="small" style="margin:-4px 0 6px">75 eller 150 g rørt oksetatar, tilsmagt i køkkenet</p>
+            <div class="dish"><span class="dish__name">Moules marinières</span><span class="dish__dots"></span><span class="dish__price">200</span></div>
+            <p class="small" style="margin:-4px 0 6px">700 g danske blåmuslinger fra Vildsund. Pommes frites kan tilkøbes</p>
+            <div class="dish"><span class="dish__name">Boeuf bourguignon</span><span class="dish__dots"></span><span class="dish__price">200</span></div>
+            <p class="small" style="margin:-4px 0 6px">Braiseret oksekød, kartoffelmos og rødvinssauce</p>
+            <div class="dish"><span class="dish__name">Stjerneskud</span><span class="dish__dots"></span><span class="dish__price">220</span></div>
+            <p class="small" style="margin:-4px 0 6px">Med friteret og dampet fiskefilet samt rejer</p>
+            <div class="dish"><span class="dish__name">3 retters menu</span><span class="dish__dots"></span><span class="dish__price">300</span></div>
+            <p class="small" style="margin:-4px 0 6px">Se fanen Menuer &amp; brunch</p>
+          </div>
+          <div class="cat">
+            <h3>Tilkøb</h3>
+            <div class="dish"><span class="dish__name">Brød med smør og oliventapenade</span><span class="dish__dots"></span><span class="dish__price">10</span></div>
+            <div class="dish"><span class="dish__name">Pommes frites med hvidløgsmayo</span><span class="dish__dots"></span><span class="dish__price">50</span></div>
+            <p class="menu__foot">Ønskes dessert eller ost, så spørg personalet.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- AFTEN -->
+      <div class="panel" id="p-aften" role="tabpanel" aria-labelledby="t-aften" hidden>
+        <p class="panel__note">
+          <span>Serveres 16.30–21.00. Alle priser i kroner.</span>
+          <a href="https://belli.dk/wp-content/uploads/2026/06/Aftenmenu-dansk-juni-2026-1.jpg" target="_blank" rel="noopener">Se det originale kort</a>
+        </p>
+        <div class="cols">
+          <div class="cat">
+            <h3>Forretter</h3>
+            <div class="dish"><span class="dish__name">Svampesuppe</span><span class="dish__desc">, trøffelolie og brødcrouton</span><span class="dish__dots"></span><span class="dish__price">100</span></div>
+            <div class="dish"><span class="dish__name">Pasta</span><span class="dish__desc">, svampefyldt ravioli, østershatte, spinat</span><span class="dish__dots"></span><span class="dish__price">120</span></div>
+            <div class="dish"><span class="dish__name">Rørt oksetatar</span><span class="dish__desc">, 75 g</span><span class="dish__dots"></span><span class="dish__price">120</span></div>
+            <div class="dish"><span class="dish__name">Løgsuppe</span><span class="dish__desc">, ostegratineret</span><span class="dish__dots"></span><span class="dish__price">120</span></div>
+            <div class="dish"><span class="dish__name">Rejer</span><span class="dish__desc">, 6 rosérejer med mayo</span><span class="dish__dots"></span><span class="dish__price">120</span></div>
+            <div class="dish"><span class="dish__name">Gravad laks</span><span class="dish__desc">, fennikel og sennepsdressing</span><span class="dish__dots"></span><span class="dish__price">120</span></div>
+            <div class="dish"><span class="dish__name">Carpaccio</span><span class="dish__desc">, parmesan, rucola, pinjekerner</span><span class="dish__dots"></span><span class="dish__price">140</span></div>
+            <div class="dish"><span class="dish__name">Brød</span><span class="dish__desc">, smør og oliventapenade</span><span class="dish__dots"></span><span class="dish__price">10</span></div>
+          </div>
+          <div class="cat">
+            <h3>Hovedretter</h3>
+            <div class="dish"><span class="dish__name">Blåmuslinger</span><span class="dish__desc">, 700 g fra Vildsund</span><span class="dish__dots"></span><span class="dish__price">200</span></div>
+            <div class="dish"><span class="dish__name">Pasta</span><span class="dish__desc">, ravioli med østershatte og spinat</span><span class="dish__dots"></span><span class="dish__price">200</span></div>
+            <div class="dish"><span class="dish__name">Rørt oksetatar</span><span class="dish__desc">, 150 g</span><span class="dish__dots"></span><span class="dish__price">200</span></div>
+            <div class="dish"><span class="dish__name">Burger</span><span class="dish__desc">, pulled beef, pickles, pommes frites</span><span class="dish__dots"></span><span class="dish__price">200</span></div>
+            <div class="dish"><span class="dish__name">Boeuf bourguignon</span><span class="dish__desc">, kartoffelmos og rødvinssauce</span><span class="dish__dots"></span><span class="dish__price">200</span></div>
+            <div class="dish"><span class="dish__name">Sprængt kalvebryst</span><span class="dish__desc">, spidskål og peberodssauce</span><span class="dish__dots"></span><span class="dish__price">240</span></div>
+            <div class="dish"><span class="dish__name">Laks</span><span class="dish__desc">, ovnbagt med årstidens tilbehør</span><span class="dish__dots"></span><span class="dish__price">280</span></div>
+            <div class="dish"><span class="dish__name">Steak frites</span><span class="dish__desc">, ribeye og bearnaise</span><span class="dish__dots"></span><span class="dish__price">350</span></div>
+            <div class="dish"><span class="dish__name">Tilkøb</span><span class="dish__desc">, pommes frites eller grøn salat</span><span class="dish__dots"></span><span class="dish__price">50</span></div>
+          </div>
+          <div class="cat">
+            <h3>Desserter</h3>
+            <div class="dish"><span class="dish__name">Chokoladekage</span><span class="dish__desc">, mousse og vaniljeis</span><span class="dish__dots"></span><span class="dish__price">100</span></div>
+            <div class="dish"><span class="dish__name">Crème brûlée</span><span class="dish__desc">, klassisk gratineret</span><span class="dish__dots"></span><span class="dish__price">100</span></div>
+            <div class="dish"><span class="dish__name">Belli is</span><span class="dish__desc">, nougat, nødder, marcipan, chokolade</span><span class="dish__dots"></span><span class="dish__price">100</span></div>
+            <div class="dish"><span class="dish__name">Citronmarengskage</span><span class="dish__desc">, med citronsorbet</span><span class="dish__dots"></span><span class="dish__price">120</span></div>
+            <div class="dish"><span class="dish__name">Brie de Meaux</span><span class="dish__desc">, kompot, oliven og brød</span><span class="dish__dots"></span><span class="dish__price">120</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MENUER -->
+      <div class="panel" id="p-menuer" role="tabpanel" aria-labelledby="t-menuer" hidden>
+        <p class="panel__note">
+          <span>Jubilæumsmenuen vælges af hele bordet. Retterne kan også vælges enkeltvis fra à la carte.</span>
+          <a href="https://belli.dk/wp-content/uploads/2026/06/Frokost-forside-juni-2026-1.jpg" target="_blank" rel="noopener">Se det originale kort</a>
+        </p>
+        <div class="cols">
+          <div class="cat">
+            <h3>32 års jubilæumsmenu · 300</h3>
+            <div class="dish"><span class="dish__name">Forret</span><span class="dish__dots"></span></div>
+            <p class="small" style="margin:-4px 0 10px">Svampesuppe med trøffelolie og brødcrouton</p>
+            <div class="dish"><span class="dish__name">Hovedret</span><span class="dish__dots"></span></div>
+            <p class="small" style="margin:-4px 0 10px">Boeuf bourguignon, braiseret oksekød, kartoffelmos og rødvinssauce</p>
+            <div class="dish"><span class="dish__name">Dessert</span><span class="dish__dots"></span></div>
+            <p class="small" style="margin:-4px 0 10px">Chokoladekage med hvid chokolademousse og vaniljeis</p>
+          </div>
+          <div class="cat">
+            <h3>Brunchanretning · 180</h3>
+            <p class="small" style="margin-top:-4px">En servering med seks små retter.</p>
+            <div class="dish"><span class="dish__name">Laks</span><span class="dish__desc">, med fennikel</span><span class="dish__dots"></span></div>
+            <div class="dish"><span class="dish__name">Suppe</span><span class="dish__desc">, svampesuppe med trøffelolie og urter</span><span class="dish__dots"></span></div>
+            <div class="dish"><span class="dish__name">Brunchpølse</span><span class="dish__desc">, sønderjysk pølse med løgkompot</span><span class="dish__dots"></span></div>
+            <div class="dish"><span class="dish__name">Quiche</span><span class="dish__desc">, spinattærte med tomat og svampe</span><span class="dish__dots"></span></div>
+            <div class="dish"><span class="dish__name">Ost</span><span class="dish__desc">, Brie de Meaux med kompot</span><span class="dish__dots"></span></div>
+            <div class="dish"><span class="dish__name">Chokolade</span><span class="dish__desc">, chokoladekage med hvid mousse</span><span class="dish__dots"></span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- VIN -->
+      <div class="panel" id="p-vin" role="tabpanel" aria-labelledby="t-vin" hidden>
+        <p class="panel__note">
+          <span>Priser i kroner: glas / flaske.</span>
+          <a href="https://belli.dk/wp-content/uploads/2026/03/Vinkort-dk-2026-1.jpg" target="_blank" rel="noopener">Se det originale vinkort</a>
+        </p>
+        <div class="cols">
+          <div class="cat">
+            <h3>Hvidvin</h3>
+            <div class="dish"><span class="dish__name">Sauvignon blanc</span><span class="dish__desc">, Herredad, Spanien</span><span class="dish__dots"></span><span class="dish__price">80/350</span></div>
+            <div class="dish"><span class="dish__name">Pinot grigio 2024</span><span class="dish__desc">, Vezzani, Italien</span><span class="dish__dots"></span><span class="dish__price">100/395</span></div>
+            <div class="dish"><span class="dish__name">Chardonnay 2024</span><span class="dish__desc">, Moreau, Frankrig</span><span class="dish__dots"></span><span class="dish__price">120/480</span></div>
+            <div class="dish"><span class="dish__name">Riesling, Muscat, Silvaner 2024</span><span class="dish__desc">, Korrell, Tyskland</span><span class="dish__dots"></span><span class="dish__price">120/495</span></div>
+            <div class="dish"><span class="dish__name">Grüner veltliner</span><span class="dish__desc">, Tegernseerhof, Østrig</span><span class="dish__dots"></span><span class="dish__price">580</span></div>
+            <div class="dish"><span class="dish__name">Sancerre 2023</span><span class="dish__desc">, Berthier, Loire</span><span class="dish__dots"></span><span class="dish__price">780</span></div>
+          </div>
+          <div class="cat">
+            <h3>Rødvin</h3>
+            <div class="dish"><span class="dish__name">Pinot noir 2023</span><span class="dish__desc">, Sartori, Italien</span><span class="dish__dots"></span><span class="dish__price">80/350</span></div>
+            <div class="dish"><span class="dish__name">Zinfandel 2024</span><span class="dish__desc">, Alameda, USA</span><span class="dish__dots"></span><span class="dish__price">100/385</span></div>
+            <div class="dish"><span class="dish__name">Ripasso DOC 2021</span><span class="dish__desc">, Sartori, Italien</span><span class="dish__dots"></span><span class="dish__price">120/485</span></div>
+            <div class="dish"><span class="dish__name">Malbec 2023</span><span class="dish__desc">, Zuccardi, Argentina</span><span class="dish__dots"></span><span class="dish__price">120/495</span></div>
+            <div class="dish"><span class="dish__name">Dolba 2019</span><span class="dish__desc">, Viberti, Italien</span><span class="dish__dots"></span><span class="dish__price">585</span></div>
+            <div class="dish"><span class="dish__name">Bordeaux rouge 2018</span><span class="dish__desc">, Oscar Edition by Haut-Brion</span><span class="dish__dots"></span><span class="dish__price">625</span></div>
+            <div class="dish"><span class="dish__name">Aloxe-Corton 2023</span><span class="dish__desc">, Maldant, Bourgogne</span><span class="dish__dots"></span><span class="dish__price">785</span></div>
+            <div class="dish"><span class="dish__name">Château Laniote Saint-Émilion grand cru 2016</span><span class="dish__dots"></span><span class="dish__price">895</span></div>
+          </div>
+          <div class="cat">
+            <h3>Rosé &amp; dessertvin</h3>
+            <div class="dish"><span class="dish__name">Tempranillo rosé 2024</span><span class="dish__desc">, Mesta, Spanien</span><span class="dish__dots"></span><span class="dish__price">100/380</span></div>
+            <div class="dish"><span class="dish__name">Tawny portvin</span><span class="dish__desc">, Portugal</span><span class="dish__dots"></span><span class="dish__price">80</span></div>
+            <div class="dish"><span class="dish__name">Moscatel 2023</span><span class="dish__desc">, Spanien</span><span class="dish__dots"></span><span class="dish__price">80</span></div>
+          </div>
+          <div class="cat">
+            <h3>Aperitif &amp; cocktails</h3>
+            <div class="dish"><span class="dish__name">Prosecco</span><span class="dish__dots"></span><span class="dish__price">90/580</span></div>
+            <div class="dish"><span class="dish__name">Kir royale</span><span class="dish__dots"></span><span class="dish__price">90</span></div>
+            <div class="dish"><span class="dish__name">Gin &amp; tonic</span><span class="dish__dots"></span><span class="dish__price">90</span></div>
+            <div class="dish"><span class="dish__name">Aperol spritz</span><span class="dish__dots"></span><span class="dish__price">90</span></div>
+            <div class="dish"><span class="dish__name">Mojito</span><span class="dish__dots"></span><span class="dish__price">90</span></div>
+          </div>
+          <div class="cat">
+            <h3>Øl</h3>
+            <div class="dish"><span class="dish__name">Hancock pilsner</span><span class="dish__desc">, 0,25 / 0,5</span><span class="dish__dots"></span><span class="dish__price">45/70</span></div>
+            <div class="dish"><span class="dish__name">Hancock lager</span><span class="dish__desc">, 0,25 / 0,5</span><span class="dish__dots"></span><span class="dish__price">45/70</span></div>
+            <div class="dish"><span class="dish__name">Belli’s old ale</span><span class="dish__desc">, 0,25 / 0,5</span><span class="dish__dots"></span><span class="dish__price">45/70</span></div>
+            <div class="dish"><span class="dish__name">Mönchshof alkoholfri</span><span class="dish__desc">, 0,5</span><span class="dish__dots"></span><span class="dish__price">70</span></div>
+            <div class="dish"><span class="dish__name">Old Gambrinus</span><span class="dish__desc">, flaske 0,33</span><span class="dish__dots"></span><span class="dish__price">70</span></div>
+          </div>
+          <div class="cat">
+            <h3>Vand &amp; sodavand</h3>
+            <div class="dish"><span class="dish__name">Vand med eller uden brus</span><span class="dish__desc">, 0,75</span><span class="dish__dots"></span><span class="dish__price">40</span></div>
+            <div class="dish"><span class="dish__name">Coca-Cola og Cola Zero</span><span class="dish__desc">, 0,25</span><span class="dish__dots"></span><span class="dish__price">40</span></div>
+            <div class="dish"><span class="dish__name">Orangina</span><span class="dish__desc">, 0,25</span><span class="dish__dots"></span><span class="dish__price">40</span></div>
+            <div class="dish"><span class="dish__name">Hjemmelavede safter</span><span class="dish__desc">, hyldeblomst, rabarber, solbær</span><span class="dish__dots"></span><span class="dish__price">50</span></div>
+            <div class="dish"><span class="dish__name">Friskpresset appelsinjuice</span><span class="dish__dots"></span><span class="dish__price">50</span></div>
+            <p class="menu__foot">Ved køb af en flaske vin følger en flaske vand med. Vores tjenere smager på alle vine før udskænkning.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- TILBUD -->
+      <div class="panel" id="p-tilbud" role="tabpanel" aria-labelledby="t-tilbud" hidden>
+        <p class="panel__note">
+          <span>Kun ved online booking mellem 17.00 og 18.30.</span>
+          <a href="https://belli.dk/wp-content/uploads/2026/06/Tilbud-.-ugens-tilbud-2026-2.jpg" target="_blank" rel="noopener">Se det originale opslag</a>
+        </p>
+        <div class="cols">
+          <div class="cat">
+            <h3>Tirsdag · 130</h3>
+            <p class="small" style="margin-top:-4px">Boeuf bourguignon, braiseret oksekød, kartoffelmos og rødvinssauce.</p>
+          </div>
+          <div class="cat">
+            <h3>Onsdag · 130</h3>
+            <p class="small" style="margin-top:-4px">Burger med pulled beef, pickles, pommes frites og mayo.</p>
+          </div>
+        </div>
+        <p class="menu__foot">Tilbuddet vælges som koncept, når du booker bord online.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TO SERVERINGER -->
+  <section>
+    <div class="wrap">
+      <div class="serv">
+        <article id="frokost" class="rv">
+          <img src="img/serv-frokost-1200.webp" srcset="img/serv-frokost-600.webp 600w, img/serv-frokost-1200.webp 640w" sizes="(max-width:1000px) 100vw, 46vw" alt="Frokostanretning med laks og rejer på hvid tallerken" width="1200" height="750" loading="lazy">
+          <p class="hours">Frokost · 11.00–15.00</p>
+          <h3>Fra quiche til stjerneskud</h3>
+          <p>Frokosten er hverdagsagtig og hurtig nok til en pause midt på dagen, men det er stadig køkkenets egne retter: suppe, carpaccio, moules og stjerneskud. Brunchanretningen med seks små retter kan bestilles hele frokosten igennem.</p>
+          <a class="txt" href="#menu" data-tab="t-frokost">Se frokostkortet</a>
+          <a class="txt" href="https://belli.dk/frokost/" target="_blank" rel="noopener">Frokostsiden på belli.dk</a>
+        </article>
+        <article id="aften" class="rv">
+          <img src="img/serv-aften-1200.webp" srcset="img/serv-aften-600.webp 600w, img/serv-aften-1200.webp 1000w" sizes="(max-width:1000px) 100vw, 46vw" alt="Aftenret anrettet på tallerken hos Brasserie Belli" width="1200" height="750" loading="lazy">
+          <p class="hours">Aften · 16.30–21.00</p>
+          <h3>Tre retter og god tid</h3>
+          <p>Om aftenen sættes der duge og stearinlys på bordene, og kortet bliver længere: forretter fra 100, hovedretter til og med steak frites, og et fast dessertudvalg. Jubilæumsmenuen på tre retter koster 300 og vælges af hele bordet.</p>
+          <a class="txt" href="#menu" data-tab="t-aften">Se aftenkortet</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIN & ØL -->
+  <section class="vin" id="vin">
+    <div class="wrap vin__grid">
+      <div>
+        <h2>Vin, øl og en flaske vand</h2>
+        <p class="lede">Vinkortet er kort og valgt med vilje. Franske klassikere fra Sancerre til Saint-Émilion, og et par italienske og spanske, der kan drikkes til hverdag.</p>
+        <p>Vi brygger vores egen Belli’s Old Ale sammen med Winter Coat Bryggeri i Sabro, og den står på hanen ved siden af Hancock. Til frokost er der hjemmelavet saft af hyldeblomst, rabarber og solbær.</p>
+        <p class="pull">Ved køb af en flaske vin følger en flaske vand med. Vores tjenere smager på alle vine før udskænkning.</p>
+      </div>
+      <div class="vin__imgs rv">
+        <img src="img/vin-900.webp" srcset="img/vin-450.webp 450w, img/vin-900.webp 900w" sizes="(max-width:1000px) 45vw, 23vw" alt="Vinflasker med Brasserie Bellis egne etiketter" width="900" height="1200" loading="lazy">
+        <img src="img/taps-1200.webp" srcset="img/taps-600.webp 600w, img/taps-1200.webp 1000w" sizes="(max-width:1000px) 45vw, 23vw" alt="Messingfarvede ølhaner i baren" width="1200" height="800" loading="lazy" style="aspect-ratio:3/4">
+      </div>
+    </div>
+  </section>
+
+  <!-- HUSET -->
+  <section class="huset" id="huset">
+    <div class="wrap">
+      <img class="wide rv" src="img/personale-1600.webp" srcset="img/personale-800.webp 800w, img/personale-1600.webp 1600w" sizes="100vw" alt="Personalet på Brasserie Belli samlet i restauranten" width="1600" height="900" loading="lazy">
+      <div class="huset__grid">
+        <div>
+          <h2>Huset og holdet</h2>
+          <p class="lede">Frederiksgade 54 har haft mange liv. Før brasseriet var her værtshuset Peder Most, og længe før det købmandsforretningen Worsøe.</p>
+          <p>I dag er der hvide duge, røde læderbænke og farvede stole, cirkusplakater på væggene og et åbent køkken bagest i lokalet. Om sommeren står bordene ude på fortovet under markisen med ternede duge.</p>
+          <p>Trine og Ronald står her selv hver dag sammen med et fast hold af tjenere og kokke. Det er dem, du møder, når du kommer ind ad døren.</p>
+        </div>
+        <figure class="rv" style="margin:0">
+          <img src="img/trine-ronald-1200.webp" srcset="img/trine-ronald-600.webp 600w, img/trine-ronald-1200.webp 900w" sizes="(max-width:1000px) 100vw, 40vw" alt="Trine Belli og Ronald Dijkstra i restauranten" width="1200" height="800" loading="lazy">
+          <figcaption>Trine Belli og Ronald Dijkstra.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- SELSKABER -->
+  <div class="band">
+    <div class="wrap band__in">
+      <div>
+        <h2>Selskaber og mad ud af huset</h2>
+      </div>
+      <div>
+        <p>Søndag og mandag holder vi lukket for almindelig servering, men åbent for selskaber og mad ud af huset. Skal I holde fødselsdag, firmafrokost eller julefrokost, så ring på 86 12 07 60, så finder vi ud af det.</p>
+        <p style="margin-bottom:0"><a href="https://belli.dk/selskaber/" target="_blank" rel="noopener">Se mulighederne for selskaber</a> eller <a href="https://belli.dk/gavekort/" target="_blank" rel="noopener">køb et gavekort</a>.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- BOOKING -->
+  <section class="book" id="book">
+    <div class="wrap">
+      <h2>Book et bord hos Belli</h2>
+      <p>Book online hele døgnet, eller ring til os i åbningstiden. Større selskaber og mad ud af huset aftaler vi over telefonen.</p>
+      <div class="book__cta">
+        <a class="btn btn--light" href="https://www.bord-booking.dk/online_booking/index.php?restaurantId=70023" target="_blank" rel="noopener">Book bord online</a>
+        <a class="btn btn--light" href="tel:+4586120760">Ring 86 12 07 60</a>
+      </div>
+      <div class="book__meta">
+        <div><b>Åbningstider</b>Tirsdag–lørdag 11–23<br>Søndag og mandag: selskaber og mad ud af huset</div>
+        <div><b>Køkkenet</b>Frokost 11.00–15.00<br>Aften 16.30–21.00</div>
+        <div><b>Tirsdag og onsdag</b>Dagens ret 130 kr. ved online booking mellem 17.00 og 18.30</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FIND OS -->
+  <section id="find">
+    <div class="wrap">
+      <h2 style="margin-bottom:34px">Find os</h2>
+      <div class="find__grid find">
+        <dl>
+          <div>
+            <dt>Adresse</dt>
+            <dd>Frederiksgade 54<br>8000 Aarhus C</dd>
+          </div>
+          <div>
+            <dt>Telefon</dt>
+            <dd><a href="tel:+4586120760">86 12 07 60</a></dd>
+          </div>
+          <div>
+            <dt>Mail</dt>
+            <dd><a href="mailto:belli@belli.dk">belli@belli.dk</a></dd>
+          </div>
+          <div>
+            <dt>Kom hertil</dt>
+            <dd>Gåafstand til Musikhuset, Aarhus Teater, Svalegangen, ARoS og Den Gamle By.</dd>
+          </div>
+        </dl>
+        <figure class="map">
+          <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Frederiksgade+54%2C+8000+Aarhus+C" target="_blank" rel="noopener" aria-label="Åbn ruteplan til Frederiksgade 54 i Google Maps">
+            <img src="img/kort-720.webp" srcset="img/kort-480.webp 480w, img/kort-720.webp 720w" sizes="(max-width:1000px) 100vw, 55vw" alt="Kort over Frederiksgade 54 i Aarhus midtby" width="720" height="540" loading="lazy">
+          </a>
+          <figcaption>Tryk på kortet for ruteplan. Kortdata: © OpenStreetMap-bidragydere.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr__grid">
+      <div>
+        <img class="mark" src="img/logo-white.png" alt="Brasserie Belli" width="150" height="55" loading="lazy">
+        <p>Frederiksgade 54, 8000 Aarhus C<br>
+        <a href="tel:+4586120760">86 12 07 60</a> · <a href="mailto:belli@belli.dk">belli@belli.dk</a></p>
+      </div>
+      <div>
+        <h4>Åbningstider</h4>
+        <ul>
+          <li>Tirsdag–lørdag 11–23</li>
+          <li>Køkkenet 11–15 og 16.30–21</li>
+          <li>Søndag og mandag: selskaber og mad ud af huset</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Genveje</h4>
+        <ul>
+          <li><a href="#menu">Menukortet</a></li>
+          <li><a href="https://www.bord-booking.dk/online_booking/index.php?restaurantId=70023" target="_blank" rel="noopener">Book bord</a></li>
+          <li><a href="https://www.facebook.com/brasseriebelli" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://www.instagram.com/brasseriebelli/" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="http://www.findsmiley.dk/43102" target="_blank" rel="noopener">Smiley-rapport</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ftr__bot">
+      <span>© Brasserie Belli. Alle retter og priser er gengivet fra belli.dk.</span>
+      <span>Designoplæg bygget af Ronny Hong · 53 61 36 99 · ronnyhong723@gmail.com</span>
+    </div>
+  </div>
+</footer>
+
+<div class="mbar">
+  <a class="btn" href="https://www.bord-booking.dk/online_booking/index.php?restaurantId=70023" target="_blank" rel="noopener">Book bord</a>
+  <a class="btn btn--ghost" href="tel:+4586120760" aria-label="Ring til Brasserie Belli">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 1.9.6 2.8a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.8.6a2 2 0 0 1 1.7 2z"/></svg>
+  </a>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Restaurant",
+  "name":"Brasserie Belli",
+  "url":"https://belli.dk/",
+  "image":"https://belli.dk/wp-content/uploads/2020/11/10.jpg",
+  "telephone":"+4586120760",
+  "email":"belli@belli.dk",
+  "priceRange":"$$",
+  "servesCuisine":["Fransk","Brasserie"],
+  "foundingDate":"1994",
+  "address":{"@type":"PostalAddress","streetAddress":"Frederiksgade 54","addressLocality":"Aarhus C","postalCode":"8000","addressCountry":"DK"},
+  "geo":{"@type":"GeoCoordinates","latitude":56.1547768,"longitude":10.204431},
+  "openingHoursSpecification":[
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"11:00","closes":"23:00"}
+  ],
+  "acceptsReservations":"https://www.bord-booking.dk/online_booking/index.php?restaurantId=70023",
+  "hasMenu":"https://belli.dk/frokost/",
+  "sameAs":["https://www.facebook.com/brasseriebelli","https://www.instagram.com/brasseriebelli/"]
+}
+</script>
+
+<script>
+(function(){
+  var hdr=document.getElementById('hdr'),burger=document.getElementById('burger'),nav=document.getElementById('nav');
+
+  function onScroll(){hdr.classList.toggle('hdr--solid',window.scrollY>60);}
+  onScroll();addEventListener('scroll',onScroll,{passive:true});
+
+  burger.addEventListener('click',function(){
+    var open=nav.classList.toggle('open');
+    burger.setAttribute('aria-expanded',open?'true':'false');
+    burger.setAttribute('aria-label',open?'Luk menu':'Åbn menu');
+    document.body.style.overflow=open?'hidden':'';
+    if(open)hdr.classList.add('hdr--solid');else onScroll();
+  });
+  nav.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click',function(){
+      nav.classList.remove('open');burger.setAttribute('aria-expanded','false');document.body.style.overflow='';
+    });
+  });
+
+  // menu tabs
+  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  function select(tab){
+    tabs.forEach(function(t){
+      var on=t===tab;
+      t.setAttribute('aria-selected',on?'true':'false');
+      document.getElementById(t.getAttribute('aria-controls')).hidden=!on;
+    });
+  }
+  tabs.forEach(function(t,i){
+    t.addEventListener('click',function(){select(t);});
+    t.addEventListener('keydown',function(e){
+      var n=e.key==='ArrowRight'?i+1:e.key==='ArrowLeft'?i-1:null;
+      if(n===null)return;e.preventDefault();
+      var next=tabs[(n+tabs.length)%tabs.length];next.focus();select(next);
+    });
+  });
+  document.querySelectorAll('[data-tab]').forEach(function(l){
+    l.addEventListener('click',function(){
+      var t=document.getElementById(l.getAttribute('data-tab'));
+      if(t){select(t);}
+    });
+  });
+
+  // image reveal
+  var rvs=[].slice.call(document.querySelectorAll('.rv'));
+  function revealAll(){rvs.forEach(function(el){el.classList.add('in');});}
+  if('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches && !document.hidden){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+    },{rootMargin:'200px 0px -6% 0px',threshold:.01});
+    rvs.forEach(function(el){io.observe(el);});
+    // fail-safe: never leave content invisible if the tab stops rendering
+    document.addEventListener('visibilitychange',function(){if(document.hidden)revealAll();});
+    addEventListener('pagehide',revealAll);
+  }else{
+    revealAll();
+  }
+})();
+</script>
+</body>
+</html>
